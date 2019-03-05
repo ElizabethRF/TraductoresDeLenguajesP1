@@ -18,29 +18,53 @@ public class Processor{
     public void processWord(String word){
         int i = 0, j = word.length() - 1;
         int iState = 0;
-        while(i < word.length() - 2 && iState != -1){
+        int iStateGlobal = 0; 
+        while(i < word.length() - 1 && iState != -1){
             iState = m.getLeft(iState, word.charAt(i));
+            if(iState != -1){
+                iStateGlobal = iState; 
+            }
+            System.out.println("\n actual char: " + word.charAt(i));
+            System.out.println(" iState: " + iState);
+            System.out.println(" iStateGlobal: " + iStateGlobal);
+            System.out.println(" i : " + i);
             i++;
         }
 
-        if(i == word.length() - 2){
-            m.addTransition(iState, m.getFinalState(), word.charAt(i + 1));
+        if(i == word.length() - 1){
+            System.out.println(" word length - 2 (penúltima) " + i);
+            m.addTransition(iState, m.getFinalState(), word.charAt(i));
         }
         else{
-            String subWord = word.substring(i + 2);
+            System.out.println(" evaluación de derecha a izquierda");
+            System.out.println(" i para substring " + i);
+            String subWord = word.substring(i);
+            System.out.println(" subword: "+ subWord );
+            System.out.println(" subwordLength: "+ subWord.length());
             int[] longestPath = getLongestPath(m.getFinalState(), subWord, subWord.length() - 1);
             j -= longestPath[1];
-            for(; i < j; i++){
+            
+            for(i--; i < j; i++){
+                System.out.println(" \nvalor i " + i);
+                System.out.println(" valor en i " + word.charAt(i));
+                System.out.println(" valor j " + j);
+                System.out.println(" valor en j " + word.charAt(j));
+                System.out.println(" iStateGlobal " + iStateGlobal);
                 int newState = m.addState();
-                m.addTransition(iState, newState, word.charAt(i + 1));
-                iState = newState;
+                m.addTransition(iStateGlobal, newState, word.charAt(i));
+                iStateGlobal = newState;
             }
-            m.addTransition(iState, longestPath[0], word.charAt(i + 1));
+            m.addTransition(iStateGlobal, longestPath[0], word.charAt(i));
             
         }
     }
 
     public int[] getLongestPath(int rightState, String word, int i){
+        System.out.println("\n Get longest path method " );
+        System.out.println(" rightState: " + rightState);
+        System.out.println(" word " + word);
+        System.out.println(" i " + i);
+
         Stack<Integer> statesRight = m.getRight(rightState, word.charAt(i));
         int[] actualPath = new int[2];
         actualPath[0] = rightState;
@@ -48,17 +72,25 @@ public class Processor{
         int[] maxPath = new int[2];
         maxPath[0] = rightState;
         maxPath[1] = 0;
+       
 
-        while(!statesRight.isEmpty()){
+        while(!statesRight.isEmpty() && i >= 0){
             actualPath[1] = 0;
             int state = statesRight.pop();
-            actualPath = getLongestPath(state, word, i - 1);
-            actualPath[1]++;
-            if(actualPath[1] > maxPath[1]){
-                maxPath[0] = actualPath[0];
-                maxPath[1] = actualPath[1];
+            if(i == 0){
+                maxPath[0] = state; 
+                maxPath[1] = 1;
+            }else{
+                actualPath = getLongestPath(state, word, i - 1);
+                actualPath[1]++;
+                if(actualPath[1] > maxPath[1]){
+                    maxPath[0] = actualPath[0];
+                    maxPath[1] = actualPath[1];
+                }
             }
         }
+
+        System.out.println(" return " + maxPath[0] + " , " +maxPath[1]);
         return maxPath;
     }
 
