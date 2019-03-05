@@ -1,5 +1,24 @@
+import java.util.*;
+
 public class Main{
 	public static void main(String[] args){
-		System.out.println("Hola");
+
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			String line = sc.nextLine();
+			String[] words = line.split(" ");
+			process(words);
+		}
+	}
+	public static void process(String[] words){
+		Processor p = new Processor();
+		p.processFirstWord(words[0]);
+		for(int i = 1; i < words.length; i++){
+			p.processWord(words[i]);
+		}
+		p.printMatrix();
+		for(int i = 0; i < words.length; i++){
+			
+		}
 	}
 }
