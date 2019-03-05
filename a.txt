@@ -1,0 +1,484 @@
+Primera palabra correcta
+
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	
+q0		a									
+q1			d								
+q2				a							
+q3					p						
+q4						t					
+q5							a				
+q6								b			
+q7									l		
+q8										e	
+Q9											
+
+
+ actual char: a
+ iState: 1
+ iStateGlobal: 1
+ i : 0
+
+ actual char: d
+ iState: 2
+ iStateGlobal: 2
+ i : 1
+
+ actual char: a
+ iState: 3
+ iStateGlobal: 3
+ i : 2
+
+ actual char: p
+ iState: 4
+ iStateGlobal: 4
+ i : 3
+
+ actual char: t
+ iState: 5
+ iStateGlobal: 5
+ i : 4
+
+ actual char: a
+ iState: 6
+ iStateGlobal: 6
+ i : 5
+
+ actual char: c
+ iState: -1
+ iStateGlobal: 6
+ i : 6
+ evaluación de derecha a izquierda
+ i para substring 7
+ subword: ion
+ subwordLength: 3
+
+ Get longest path method 
+ rightState: 9
+ word ion
+ i 2
+ return 9 , 0
+ 
+valor i 6
+ valor en i c
+ valor j 9
+ valor en j n
+ iStateGlobal 6
+ 
+valor i 7
+ valor en i i
+ valor j 9
+ valor en j n
+ iStateGlobal 10
+ 
+valor i 8
+ valor en i o
+ valor j 9
+ valor en j n
+ iStateGlobal 11
+
+Palabra 1 correcta adaptacion
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	
+q0		a												
+q1			d											
+q2				a										
+q3					p									
+q4						t								
+q5							a							
+q6								b			c			
+q7									l					
+q8										e				
+Q9														
+q10												i		
+q11													o	
+q12										n				
+
+
+ actual char: c
+ iState: -1
+ iStateGlobal: 0
+ i : 0
+ evaluación de derecha a izquierda
+ i para substring 1
+ subword: abala
+ subwordLength: 5
+
+ Get longest path method 
+ rightState: 9
+ word abala
+ i 4
+ return 9 , 0
+ 
+valor i 0
+ valor en i c
+ valor j 5
+ valor en j a
+ iStateGlobal 0
+ 
+valor i 1
+ valor en i a
+ valor j 5
+ valor en j a
+ iStateGlobal 13
+ 
+valor i 2
+ valor en i b
+ valor j 5
+ valor en j a
+ iStateGlobal 14
+ 
+valor i 3
+ valor en i a
+ valor j 5
+ valor en j a
+ iStateGlobal 15
+ 
+valor i 4
+ valor en i l
+ valor j 5
+ valor en j a
+ iStateGlobal 16
+
+Palabra 2 correcta cabala
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	
+q0		a												c					
+q1			d																
+q2				a															
+q3					p														
+q4						t													
+q5							a												
+q6								b			c								
+q7									l										
+q8										e									
+Q9																			
+q10												i							
+q11													o						
+q12										n									
+q13															a				
+q14																b			
+q15																	a		
+q16																		l	
+q17										a									
+
+
+ actual char: c
+ iState: 13
+ iStateGlobal: 13
+ i : 0
+
+ actual char: a
+ iState: 14
+ iStateGlobal: 14
+ i : 1
+
+ actual char: b
+ iState: 15
+ iStateGlobal: 15
+ i : 2
+
+ actual char: a
+ iState: 16
+ iStateGlobal: 16
+ i : 3
+
+ actual char: l
+ iState: 17
+ iStateGlobal: 17
+ i : 4
+
+ actual char: g
+ iState: -1
+ iStateGlobal: 17
+ i : 5
+ evaluación de derecha a izquierda
+ i para substring 6
+ subword: ada
+ subwordLength: 3
+
+ Get longest path method 
+ rightState: 9
+ word ada
+ i 2
+
+ Get longest path method 
+ rightState: 17
+ word ada
+ i 1
+ return 17 , 0
+ return 17 , 1
+ 
+valor i 5
+ valor en i g
+ valor j 7
+ valor en j d
+ iStateGlobal 17
+ 
+valor i 6
+ valor en i a
+ valor j 7
+ valor en j d
+ iStateGlobal 18
+
+Palabra 3 correcta cabalgada
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	q18	q19	
+q0		a												c							
+q1			d																		
+q2				a																	
+q3					p																
+q4						t															
+q5							a														
+q6								b			c										
+q7									l												
+q8										e											
+Q9																					
+q10												i									
+q11													o								
+q12										n											
+q13															a						
+q14																b					
+q15																	a				
+q16																		l			
+q17										a									g		
+q18																				a	
+q19																		d			
+
+
+ actual char: b
+ iState: -1
+ iStateGlobal: 0
+ i : 0
+ evaluación de derecha a izquierda
+ i para substring 1
+ subword: abero
+ subwordLength: 5
+
+ Get longest path method 
+ rightState: 9
+ word abero
+ i 4
+ return 9 , 0
+ 
+valor i 0
+ valor en i b
+ valor j 5
+ valor en j o
+ iStateGlobal 0
+ 
+valor i 1
+ valor en i a
+ valor j 5
+ valor en j o
+ iStateGlobal 20
+ 
+valor i 2
+ valor en i b
+ valor j 5
+ valor en j o
+ iStateGlobal 21
+ 
+valor i 3
+ valor en i e
+ valor j 5
+ valor en j o
+ iStateGlobal 22
+ 
+valor i 4
+ valor en i r
+ valor j 5
+ valor en j o
+ iStateGlobal 23
+
+Palabra 4 correcta babero
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	q18	q19	q20	q21	q22	q23	q24	
+q0		a												c							b					
+q1			d																							
+q2				a																						
+q3					p																					
+q4						t																				
+q5							a																			
+q6								b			c															
+q7									l																	
+q8										e																
+Q9																										
+q10												i														
+q11													o													
+q12										n																
+q13															a											
+q14																b										
+q15																	a									
+q16																		l								
+q17										a									g							
+q18																				a						
+q19																		d								
+q20																						a				
+q21																							b			
+q22																								e		
+q23																									r	
+q24										o																
+
+
+ actual char: b
+ iState: 20
+ iStateGlobal: 20
+ i : 0
+
+ actual char: a
+ iState: 21
+ iStateGlobal: 21
+ i : 1
+
+ actual char: b
+ iState: 22
+ iStateGlobal: 22
+ i : 2
+
+ actual char: e
+ iState: 23
+ iStateGlobal: 23
+ i : 3
+ evaluación de derecha a izquierda
+ i para substring 4
+ subword: l
+ subwordLength: 1
+
+ Get longest path method 
+ rightState: 9
+ word l
+ i 0
+ return 9 , 0
+ 
+valor i 3
+ valor en i e
+ valor j 4
+ valor en j l
+ iStateGlobal 23
+
+Palabra 5 correcta babel
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	q18	q19	q20	q21	q22	q23	q24	q25	
+q0		a												c							b						
+q1			d																								
+q2				a																							
+q3					p																						
+q4						t																					
+q5							a																				
+q6								b			c																
+q7									l																		
+q8										e																	
+Q9																											
+q10												i															
+q11													o														
+q12										n																	
+q13															a												
+q14																b											
+q15																	a										
+q16																		l									
+q17										a									g								
+q18																				a							
+q19																		d									
+q20																						a					
+q21																							b				
+q22																								e			
+q23																									r	e	
+q24										o																	
+q25										l																	
+
+
+ actual char: b
+ iState: 20
+ iStateGlobal: 20
+ i : 0
+
+ actual char: a
+ iState: 21
+ iStateGlobal: 21
+ i : 1
+
+ actual char: b
+ iState: 22
+ iStateGlobal: 22
+ i : 2
+
+ actual char: e
+ iState: 23
+ iStateGlobal: 23
+ i : 3
+
+ actual char: a
+ iState: -1
+ iStateGlobal: 23
+ i : 4
+ evaluación de derecha a izquierda
+ i para substring 5
+ subword: r
+ subwordLength: 1
+
+ Get longest path method 
+ rightState: 9
+ word r
+ i 0
+ return 9 , 0
+ 
+valor i 4
+ valor en i a
+ valor j 5
+ valor en j r
+ iStateGlobal 23
+
+Palabra 6 correcta babear
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	q18	q19	q20	q21	q22	q23	q24	q25	q26	
+q0		a												c							b							
+q1			d																									
+q2				a																								
+q3					p																							
+q4						t																						
+q5							a																					
+q6								b			c																	
+q7									l																			
+q8										e																		
+Q9																												
+q10												i																
+q11													o															
+q12										n																		
+q13															a													
+q14																b												
+q15																	a											
+q16																		l										
+q17										a									g									
+q18																				a								
+q19																		d										
+q20																						a						
+q21																							b					
+q22																								e				
+q23																									r	e	a	
+q24										o																		
+q25										l																		
+q26										r																		
+
+	q0	q1	q2	q3	q4	q5	q6	q7	q8	Q9	q10	q11	q12	q13	q14	q15	q16	q17	q18	q19	q20	q21	q22	q23	q24	q25	q26	
+q0		a												c							b							
+q1			d																									
+q2				a																								
+q3					p																							
+q4						t																						
+q5							a																					
+q6								b			c																	
+q7									l																			
+q8										e																		
+Q9																												
+q10												i																
+q11													o															
+q12										n																		
+q13															a													
+q14																b												
+q15																	a											
+q16																		l										
+q17										a									g									
+q18																				a								
+q19																		d										
+q20																						a						
+q21																							b					
+q22																								e				
+q23																									r	e	a	
+q24										o																		
+q25										l																		
+q26										r																		
+

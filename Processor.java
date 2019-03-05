@@ -31,7 +31,7 @@ public class Processor{
             i++;
         }
 
-        if(i == word.length() - 1){
+        if(i == word.length()){
             System.out.println(" word length - 2 (penúltima) " + i);
             m.addTransition(iState, m.getFinalState(), word.charAt(i));
         }
