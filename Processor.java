@@ -1,4 +1,6 @@
 import java.util.Stack;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Processor{
     private Matrix m;
@@ -92,6 +94,20 @@ public class Processor{
 
         System.out.println(" return " + maxPath[0] + " , " +maxPath[1]);
         return maxPath;
+    }
+
+    public HashMap<Integer, Integer> getTransitions(){
+       
+        return m.getTransitions(); 
+
+    }
+
+    public ArrayList<ArrayList<String>> getMatrix(){
+        return m.getMatrix(); 
+    }
+
+    public int getFinalState(){
+        return m.getFinalState(); 
     }
 
     public void printMatrix(){

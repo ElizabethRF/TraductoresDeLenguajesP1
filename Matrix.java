@@ -3,9 +3,11 @@ import java.util.*;
 public class Matrix{
     private ArrayList<ArrayList<String>> matrix;
     private int finalState;
+    private HashMap<Integer, Integer> transitions;
 
     public Matrix(){
         matrix = new ArrayList<ArrayList<String>>();
+        transitions = new HashMap<Integer, Integer>(); 
         finalState = -1;
         addState();
     }
@@ -33,6 +35,8 @@ public class Matrix{
         String transString = matrix.get(originState).get(destinyState);
         if(transString.indexOf(letter) < 0){
             matrix.get(originState).set(destinyState, transString + letter);
+            transitions.put(originState , destinyState);
+            
             return true;
         }
 
@@ -58,6 +62,16 @@ public class Matrix{
         }
         
         return stateStack;
+    }
+
+    public ArrayList<ArrayList<String>> getMatrix(){
+        return matrix;
+    }
+
+    public HashMap<Integer, Integer> getTransitions(){
+       
+        return transitions; 
+
     }
 
     @Override

@@ -1,16 +1,22 @@
 import java.util.*;
 
 public class Main{
+
+	private static int finalState; 
+	private static HashMap<Integer, Integer> transitions; 
 	public static void main(String[] args){
 
 		Scanner sc = new Scanner(System.in);
 		while(sc.hasNext()){
 			String line = sc.nextLine();
 			String[] words = line.split(" ");
-			process(words);
+			ArrayList<ArrayList<String>> matrixGUI = process(words);
+			GUI gui = new GUI(matrixGUI, finalState, transitions); 
 		}
+
+		
 	}
-	public static void process(String[] words){
+	public static ArrayList<ArrayList<String>>  process(String[] words){
 		Processor p = new Processor();
 		
 		p.processFirstWord(words[0]);
@@ -23,8 +29,8 @@ public class Main{
 			p.printMatrix();
 		}
 		p.printMatrix();
-		for(int i = 0; i < words.length; i++){
-			
-		}
+		finalState = p.getFinalState();
+		transitions =  p.getTransitions();  
+		return p.getMatrix(); 
 	}
 }
