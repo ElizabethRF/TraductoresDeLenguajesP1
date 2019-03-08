@@ -7,7 +7,19 @@ public class Main{
 		while(sc.hasNext()){
 			String line = sc.nextLine();
 			String[] words = line.split(" ");
-			process(words);
+			System.out.println("antes");
+			for(int i = 0; i< words.length; i++){
+				System.out.println(words[i]);
+			}
+			
+			// lambda expression to order strings in descending mode 
+			Arrays.sort(words, (x,y) -> Integer.compare(y.length(),x.length()));
+			
+			System.out.println("\ndespues");
+			for(int i = 0; i< words.length; i++){
+				System.out.println(words[i]);
+			}
+			//process(words);
 		}
 	}
 	public static void process(String[] words){
