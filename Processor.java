@@ -33,7 +33,7 @@ public class Processor{
 
         if(i == word.length()){
             System.out.println(" word length - 2 (penúltima) " + i);
-            m.addTransition(iState, m.getFinalState(), word.charAt(i));
+            m.addTransition(iState, m.getFinalState().get(0), word.charAt(i));
         }
         else{
             System.out.println(" evaluación de derecha a izquierda");
@@ -41,7 +41,8 @@ public class Processor{
             String subWord = word.substring(i);
             System.out.println(" subword: "+ subWord );
             System.out.println(" subwordLength: "+ subWord.length());
-            int[] longestPath = getLongestPath(m.getFinalState(), subWord, subWord.length() - 1);
+            // Ahora lo voy a cambiar al longest path del primer estado final, pero debe ser para cada uno 
+            int[] longestPath = getLongestPath(m.getFinalState().get(0), subWord, subWord.length() - 1);
             j -= longestPath[1];
             
             for(i--; i < j; i++){

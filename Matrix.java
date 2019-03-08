@@ -2,19 +2,19 @@ import java.util.*;
 
 public class Matrix{
     private ArrayList<ArrayList<String>> matrix;
-    private int finalState;
+    private ArrayList<Integer> finalState;
 
     public Matrix(){
         matrix = new ArrayList<ArrayList<String>>();
-        finalState = -1;
+        finalState = new ArrayList<Integer>();
         addState();
     }
 
     public void setFinalState(int state){
-        finalState = state;
+        finalState.add(state);
     }
 
-    public int getFinalState(){
+    public ArrayList<Integer> getFinalState(){
         return finalState;
     }
 
@@ -64,7 +64,7 @@ public class Matrix{
     public String toString(){
         String matrixString = "\t";
         for(int i = 0; i < matrix.size(); i++){
-            if(i == finalState){
+            if(finalState.contains(i)){
                 matrixString += "Q";
             }
             else{
@@ -75,7 +75,7 @@ public class Matrix{
         matrixString += "\n";
         
         for(int i = 0; i < matrix.size(); i++){
-            if(i == finalState){
+            if(finalState.contains(i)){
                 matrixString += "Q";
             }
             else{
