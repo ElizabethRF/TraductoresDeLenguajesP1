@@ -69,11 +69,27 @@ Q10
  i para substring 7
  subword: le
  subwordLength: 2
+ GRADOS
+ grados para 0 : 1
+ grados para 1 : 1
+ grados para 2 : 1
+ grados para 3 : 1
+ grados para 4 : 1
+ grados para 5 : 1
+ grados para 6 : 1
+ grados para 7 : 1
+ grados para 8 : 1
+ grados para 9 : 1
+ grados para 10 : 0
+FINGRADOS
+ 
 
  Get longest path method 
  rightState: 10
  word le
  i 1
+ states right
+ end states right
  return 10 , 0
  
 valor i 6
@@ -113,11 +129,29 @@ q12											e
  i para substring 1
  subword: abalgada
  subwordLength: 8
+ GRADOS
+ grados para 0 : 1
+ grados para 1 : 1
+ grados para 2 : 1
+ grados para 3 : 1
+ grados para 4 : 1
+ grados para 5 : 1
+ grados para 6 : 2
+ grados para 7 : 1
+ grados para 8 : 1
+ grados para 9 : 1
+ grados para 10 : 0
+ grados para 11 : 1
+ grados para 12 : 1
+FINGRADOS
+ 
 
  Get longest path method 
  rightState: 10
  word abalgada
  i 7
+ states right
+ end states right
  return 10 , 0
  
 valor i 0
@@ -201,11 +235,37 @@ q20											a
  i para substring 1
  subword: abear
  subwordLength: 5
+ GRADOS
+ grados para 0 : 2
+ grados para 1 : 1
+ grados para 2 : 1
+ grados para 3 : 1
+ grados para 4 : 1
+ grados para 5 : 1
+ grados para 6 : 2
+ grados para 7 : 1
+ grados para 8 : 1
+ grados para 9 : 1
+ grados para 10 : 0
+ grados para 11 : 1
+ grados para 12 : 1
+ grados para 13 : 1
+ grados para 14 : 1
+ grados para 15 : 1
+ grados para 16 : 1
+ grados para 17 : 1
+ grados para 18 : 1
+ grados para 19 : 1
+ grados para 20 : 1
+FINGRADOS
+ 
 
  Get longest path method 
  rightState: 10
  word abear
  i 4
+ states right
+ end states right
  return 10 , 0
  
 valor i 0
@@ -296,11 +356,42 @@ q25											r
  i para substring 5
  subword: o
  subwordLength: 1
+ GRADOS
+ grados para 0 : 3
+ grados para 1 : 1
+ grados para 2 : 1
+ grados para 3 : 1
+ grados para 4 : 1
+ grados para 5 : 1
+ grados para 6 : 2
+ grados para 7 : 1
+ grados para 8 : 1
+ grados para 9 : 1
+ grados para 10 : 0
+ grados para 11 : 1
+ grados para 12 : 1
+ grados para 13 : 1
+ grados para 14 : 1
+ grados para 15 : 1
+ grados para 16 : 1
+ grados para 17 : 1
+ grados para 18 : 1
+ grados para 19 : 1
+ grados para 20 : 1
+ grados para 21 : 1
+ grados para 22 : 1
+ grados para 23 : 1
+ grados para 24 : 1
+ grados para 25 : 1
+FINGRADOS
+ 
 
  Get longest path method 
  rightState: 10
  word o
  i 0
+ states right
+ end states right
  return 10 , 0
  
 valor i 4
