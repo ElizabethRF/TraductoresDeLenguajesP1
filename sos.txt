@@ -38,8 +38,6 @@ Q8
  iState: -1
  iStateGlobal: 1
  i : 1
- i antes de i == word.length() 2
- word.length() 8
  evaluación de derecha a izquierda
  i para substring 2
  subword: ademia
@@ -135,10 +133,6 @@ q14									a
  iState: 6
  iStateGlobal: 6
  i : 5
- i antes de i == word.length() 6
- word.length() 7
- otro estado final posiblemente
-si fue estado final
  evaluación de derecha a izquierda
  i para substring 6
  subword: o
@@ -200,9 +194,6 @@ q15									o
  iState: 5
  iStateGlobal: 5
  i : 4
- i antes de i == word.length() 5
- word.length() 6
- otro estado final posiblemente
  evaluación de derecha a izquierda
  i para substring 5
  subword: r
@@ -212,26 +203,34 @@ q15									o
  rightState: 8
  word r
  i 0
- return 7 , 1
+omite el camino con final state para el estado 7
+ return 8 , 0
+ 
+valor i 4
+ valor en i a
+ valor j 5
+ valor en j r
+ iStateGlobal 5
 
 Palabra 3 correcta abusar
-	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	
-q0		a															
-q1			b							c							
-q2				u													
-q3					s												
-q4						a											
-q5							d	a									
-q6								o								d	
-Q7									r								
-Q8																	
-q9											a						
-q10												d					
-q11													e				
-q12														m			
-q13															i		
-q14									a								
-q15									o								
+	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	q16	
+q0		a																
+q1			b							c								
+q2				u														
+q3					s													
+q4						a												
+q5							d										a	
+q6								o								d		
+Q7									r									
+Q8																		
+q9											a							
+q10												d						
+q11													e					
+q12														m				
+q13															i			
+q14									a									
+q15									o									
+q16									r									
 
 
  actual char: a
@@ -253,8 +252,6 @@ q15									o
  iState: -1
  iStateGlobal: 10
  i : 3
- i antes de i == word.length() 4
- word.length() 6
  evaluación de derecha a izquierda
  i para substring 4
  subword: ar
@@ -266,30 +263,32 @@ q15									o
  i 1
 
  Get longest path method 
- rightState: 7
+ rightState: 16
  word ar
  i 0
  return 5 , 1
+omite el camino con final state para el estado 7
  return 5 , 2
 
 Palabra 4 correcta acabar
-	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	
-q0		a															
-q1			b							c							
-q2				u													
-q3					s												
-q4						a											
-q5							d	a									
-q6								o								d	
-Q7									r								
-Q8																	
-q9											a						
-q10						b						d					
-q11													e				
-q12														m			
-q13															i		
-q14									a								
-q15									o								
+	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	q16	
+q0		a																
+q1			b							c								
+q2				u														
+q3					s													
+q4						a												
+q5							d										a	
+q6								o								d		
+Q7									r									
+Q8																		
+q9											a							
+q10						b						d						
+q11													e					
+q12														m				
+q13															i			
+q14									a									
+q15									o									
+q16									r									
 
 
  actual char: a
@@ -311,8 +310,6 @@ q15									o
  iState: -1
  iStateGlobal: 10
  i : 3
- i antes de i == word.length() 4
- word.length() 6
  evaluación de derecha a izquierda
  i para substring 4
  subword: ia
@@ -331,23 +328,24 @@ q15									o
  return 13 , 2
 
 Palabra 5 correcta acacia
-	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	
-q0		a															
-q1			b							c							
-q2				u													
-q3					s												
-q4						a											
-q5							d	a									
-q6								o								d	
-Q7									r								
-Q8																	
-q9											a						
-q10						b						d		c			
-q11													e				
-q12														m			
-q13															i		
-q14									a								
-q15									o								
+	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	q16	
+q0		a																
+q1			b							c								
+q2				u														
+q3					s													
+q4						a												
+q5							d										a	
+q6								o								d		
+Q7									r									
+Q8																		
+q9											a							
+q10						b						d		c				
+q11													e					
+q12														m				
+q13															i			
+q14									a									
+q15									o									
+q16									r									
 
 
  actual char: a
@@ -369,9 +367,6 @@ q15									o
  iState: 4
  iStateGlobal: 4
  i : 3
- i antes de i == word.length() 4
- word.length() 5
- otro estado final posiblemente
  evaluación de derecha a izquierda
  i para substring 4
  subword: o
@@ -384,41 +379,43 @@ q15									o
  return 15 , 1
 
 Palabra 6 correcta abuso
-	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	
-q0		a															
-q1			b							c							
-q2				u													
-q3					s												
-q4						a										s	
-q5							d	a									
-q6								o								d	
-Q7									r								
-Q8																	
-q9											a						
-q10						b						d		c			
-q11													e				
-q12														m			
-q13															i		
-q14									a								
-q15									o								
+	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	q16	
+q0		a																
+q1			b							c								
+q2				u														
+q3					s													
+q4						a										s		
+q5							d										a	
+q6								o								d		
+Q7									r									
+Q8																		
+q9											a							
+q10						b						d		c				
+q11													e					
+q12														m				
+q13															i			
+q14									a									
+q15									o									
+q16									r									
 
-	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	
-q0		a															
-q1			b							c							
-q2				u													
-q3					s												
-q4						a										s	
-q5							d	a									
-q6								o								d	
-Q7									r								
-Q8																	
-q9											a						
-q10						b						d		c			
-q11													e				
-q12														m			
-q13															i		
-q14									a								
-q15									o								
+	q0	q1	q2	q3	q4	q5	q6	Q7	Q8	q9	q10	q11	q12	q13	q14	q15	q16	
+q0		a																
+q1			b							c								
+q2				u														
+q3					s													
+q4						a										s		
+q5							d										a	
+q6								o								d		
+Q7									r									
+Q8																		
+q9											a							
+q10						b						d		c				
+q11													e					
+q12														m				
+q13															i			
+q14									a									
+q15									o									
+q16									r									
 
 antes
 adaptable
@@ -487,8 +484,6 @@ Q10
  iState: -1
  iStateGlobal: 6
  i : 6
- i antes de i == word.length() 7
- word.length() 9
  evaluación de derecha a izquierda
  i para substring 7
  subword: le
@@ -533,8 +528,6 @@ q12											e
  iState: -1
  iStateGlobal: 0
  i : 0
- i antes de i == word.length() 1
- word.length() 9
  evaluación de derecha a izquierda
  i para substring 1
  subword: abalgada
@@ -623,8 +616,6 @@ q20											a
  iState: -1
  iStateGlobal: 0
  i : 0
- i antes de i == word.length() 1
- word.length() 6
  evaluación de derecha a izquierda
  i para substring 1
  subword: abear
@@ -720,9 +711,6 @@ q25											r
  iState: -1
  iStateGlobal: 24
  i : 4
- i antes de i == word.length() 5
- word.length() 6
- otro estado final posiblemente
  evaluación de derecha a izquierda
  i para substring 5
  subword: o
@@ -795,9 +783,6 @@ q26											o
  iState: 17
  iStateGlobal: 17
  i : 4
- i antes de i == word.length() 5
- word.length() 6
- otro estado final posiblemente
  evaluación de derecha a izquierda
  i para substring 5
  subword: a
@@ -859,9 +844,6 @@ q26											o
  iState: 24
  iStateGlobal: 24
  i : 3
- i antes de i == word.length() 4
- word.length() 5
- otro estado final posiblemente
  evaluación de derecha a izquierda
  i para substring 4
  subword: l

@@ -86,17 +86,23 @@ public class Processor{
         while(!statesRight.isEmpty() && i >= 0){
             actualPath[1] = 0;
             int state = statesRight.pop();
-            if(i == 0){
-                maxPath[0] = state; 
-                maxPath[1] = 1;
-            }else{
-                actualPath = getLongestPath(state, word, i - 1);
-                actualPath[1]++;
-                if(actualPath[1] > maxPath[1]){
-                    maxPath[0] = actualPath[0];
-                    maxPath[1] = actualPath[1];
+            if(m.getFinalState().indexOf(state) == -1){
+                if(i == 0){
+                    maxPath[0] = state; 
+                    maxPath[1] = 1;
+                }else{
+                    actualPath = getLongestPath(state, word, i - 1);
+                    actualPath[1]++;
+                    if(actualPath[1] > maxPath[1]){
+                        maxPath[0] = actualPath[0];
+                        maxPath[1] = actualPath[1];
+                    }
                 }
             }
+            else{
+                System.out.println("omite el camino con final state para el estado "+ state);
+            }
+            
         }
 
         System.out.println(" return " + maxPath[0] + " , " +maxPath[1]);
