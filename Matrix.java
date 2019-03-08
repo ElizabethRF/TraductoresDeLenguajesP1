@@ -60,6 +60,10 @@ public class Matrix{
         return stateStack;
     }
 
+    public ArrayList<ArrayList<String>> getMatrix(){
+        return matrix; 
+    }
+
     @Override
     public String toString(){
         String matrixString = "\t";
