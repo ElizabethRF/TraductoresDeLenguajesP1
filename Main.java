@@ -14,12 +14,12 @@ public class Main{
 			
 			// lambda expression to order strings in descending mode 
 			Arrays.sort(words, (x,y) -> Integer.compare(y.length(),x.length()));
-			
-			System.out.println("\ndespues");
+
+			System.out.println("\ndespues de ordenar");
 			for(int i = 0; i< words.length; i++){
 				System.out.println(words[i]);
 			}
-			//process(words);
+			process(words);
 		}
 	}
 	public static void process(String[] words){
@@ -35,8 +35,5 @@ public class Main{
 			p.printMatrix();
 		}
 		p.printMatrix();
-		for(int i = 0; i < words.length; i++){
-			
-		}
 	}
 }
