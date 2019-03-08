@@ -31,9 +31,17 @@ public class Processor{
             i++;
         }
 
-        if(i == word.length()){
-            System.out.println(" word length - 2 (penúltima) " + i);
-            m.addTransition(iState, m.getFinalState().get(0), word.charAt(i));
+        if(i == word.length() - 1){
+            int tempState = m.getLeft(iStateGlobal, word.charAt(i));
+            if(-1 != tempState){ // para las que terminen dentro del autómata 
+                m.setFinalState(tempState);
+
+            }
+        }
+        
+        if(i == word.length() ){
+                System.out.println(" word length - 2 (penúltima) " + i);
+                m.addTransition(iState, m.getFinalState().get(0), word.charAt(i));
         }
         else{
             System.out.println(" evaluación de derecha a izquierda");
